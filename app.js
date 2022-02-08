@@ -30,14 +30,14 @@ app.use(
 
 app.use(passport.initialize())
 app.use(passport.session())
-mongoose.connect('mongodb://127.0.0.1:27017/examDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-// mongoose.connect("mongodb+srv://admin-eric:adeline@cluster0.cdksd.mongodb.net/examDB", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// });
+// mongoose.connect('mongodb://127.0.0.1:27017/examDB', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+mongoose.connect("mongodb+srv://admin-eric:adeline@cluster0.cdksd.mongodb.net/medexDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 mongoose.set('useFindAndModify', false)
 
 const userSchema = new mongoose.Schema({
