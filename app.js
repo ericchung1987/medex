@@ -78,11 +78,8 @@ passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
 app.get('/', function (req, res) {
-  if (req.isAuthenticated()) {
-    res.render('userpage')
-  } else {
-    res.render('login')
-  }
+  
+  res.redirect('/userpage')
 })
 
 app.get('/osce', function (req, res) {
