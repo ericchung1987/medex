@@ -1016,13 +1016,13 @@ app.post('/mcqcomplete', (req, res) => {
             ) {
               mark -= 1
             }
-            if (mark < 0) {
-              mark = 0
-              marklist.push(mark)
-            } else {
-              marklist.push(mark)
-              mark = 0
-            }
+          }
+          if (mark < 0) {
+            mark = 0
+            marklist.push(mark)
+          } else {
+            marklist.push(mark)
+            mark = 0
           }
         }
       })
