@@ -188,7 +188,7 @@ app.get('/admin', function (req, res) {
   res.render('admin')
 })
 
-app.get('/register', function (req, res) {
+app.get('/1234secret', function (req, res) {
   res.render('register')
 })
 
