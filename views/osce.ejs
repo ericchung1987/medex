@@ -354,6 +354,20 @@
   document.addEventListener("contextmenu", (event) => event.preventDefault());
 </script>
 
+<script>
+  $(document).ready(function () {
+      const btn = document.getElementById('submitbutton');
+
+      btn.addEventListener('click', () => {
+          if (btn.innerHTML === 'Save') {
+              btn.innerHTML = 'Answer Saved';
+              btn.classList.toggle("btn-success");
+              btn.classList.toggle("btn-primary");
+          }
+      });
+  });
+</script>
+
 
 
 <%- include('partials/footer') %>
