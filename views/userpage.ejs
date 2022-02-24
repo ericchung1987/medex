@@ -56,10 +56,14 @@
 
      </p>
      <p>
-      When u have put in all your answer, you may click on the <strong>summary button</strong> to review your answer.
+      When you have put in all your answer, you may click on the <strong>summary button</strong> to review your answer.
       To end the module, click on the <strong>Complete Test</strong> button.
      </p>
-   <a class="btn btn-primary" href="/mcq?pages=1" role="button">Start MCQ test</a>
+     <% if (locals.userData.mcqStarted){ %> 
+      <a class="btn btn-primary" href="/mcq?pages=1" role="button">Continue MCQ test</a>
+      <% } else { %>
+        <a class="btn btn-primary" href="/mcq?pages=1" role="button">Start MCQ test</a>
+      <% } %>
      <hr>
  </div>
  <% } %> 
@@ -73,7 +77,7 @@
         You have <strong>60 minutes</strong> to answer all <strong>20 questions</strong>.
       </p>
       <p>
-        When u have put in all your answer, you may click on the <strong>summary button</strong> to review your answer.
+        When you have put in all your answer, you may click on the <strong>summary button</strong> to review your answer.
         To end the module, click on the <strong>Complete Test</strong> button.
         There is no <strong>Negative Marking Involved</strong>
       </p>
@@ -101,7 +105,7 @@
      </p>
      <p>
        Please remember to save your answer. <br>
-       When u have put in all your answer, you may click on the <strong>summary button</strong> to review your answer. <br>
+       When you have put in all your answer, you may click on the <strong>summary button</strong> to review your answer. <br>
        To end the module, click on the <strong>Complete Test</strong> button.
      </p>
    <% if (locals.userData.rapidStarted){ %> 
@@ -156,34 +160,8 @@
   <div>
     <h2>Result</h2>
     <p>Congratulation, you have complete all three papers</p>
-    <p>Please refresh your page if the results are not correctly reflected</p>
-    <p>
-      <strong>MCQ: </strong><%= locals.userData.mcqScore %>% 
-      <% if (parseInt(locals.userData.mcqScore) >= 50){  %> 
-      - Pass
-      <% } else {%> 
-      - Fail
-      <% } %> 
-      <br>
-      <strong>OSCE: </strong><%= locals.userData.osceScore %>% 
-      <% if (parseInt(locals.userData.osceScore) >= 50){  %> 
-        - Pass
-        <% } else if (parseInt(locals.userData.osceScore) < 50) {%> 
-        - Fail
-        <% } else {%>
-        - Not Marked
-        <% } %> 
-      <br>
-      <strong>Rapid: </strong><%= locals.userData.rapidScore %>% 
-      <% if (parseInt(locals.userData.rapidScore) >= 50){  %> 
-        - Pass
-        <% } else if (parseInt(locals.userData.rapidScore) < 50) {%> 
-        - Fail
-        <% } else {%>
-        - Not Marked
-        <% } %> 
-      <br>
-    </p> 
+    <p>The results will be out in two weeks.</p>
+    <p>In the mean time, please complete the survey to receive you result by clicking <a href="https://forms.gle/y6nfvYd2XmcPJ7mG9"></a>here</p>
     <hr>
   </div>
   <% } %> 
