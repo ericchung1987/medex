@@ -1096,7 +1096,7 @@ app.post('/oscemark', (req, res) => {
     answer.push(parseFloat(nonIntArray[i]))
   }
 
-  score = answer.reduce((a, b) => a + b, 0)
+  score = (answer.reduce((a, b) => a + b, 0) / 92) * 100;
 
   User.findOneAndUpdate(
     {
