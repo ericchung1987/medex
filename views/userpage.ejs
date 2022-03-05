@@ -164,6 +164,36 @@
     <p>In the mean time, please complete the survey to receive you result by clicking <a href="https://forms.gle/y6nfvYd2XmcPJ7mG9">here</a></p>
     <hr>
   </div>
+
+
+
+  <p>
+    <strong>MCQ: </strong><%= parseInt(locals.userData.mcqScore) %>% 
+    <% if (parseInt(locals.userData.mcqScore) >= 50){  %> 
+    - Pass
+    <% } else {%> 
+    - Fail
+    <% } %> 
+    <br>
+    <strong>OSCE: </strong><%= parseInt(locals.userData.osceScore) %>% 
+    <% if (parseInt(locals.userData.osceScore) >= 50){  %> 
+      - Pass
+      <% } else if (parseInt(locals.userData.osceScore) < 50) {%> 
+      - Fail
+      <% } else {%>
+      - Not Marked
+      <% } %> 
+    <br>
+    <strong>Rapid: </strong><%= parseInt(locals.userData.rapidScore) %>% 
+    <% if (parseInt(locals.userData.rapidScore) >= 50){  %> 
+      - Pass
+      <% } else if (parseInt(locals.userData.rapidScore) < 50) {%> 
+      - Fail
+      <% } else {%>
+      - Not Marked
+      <% } %> 
+    <br>
+  </p> 
   <% } %> 
 
 </div>
