@@ -34,7 +34,7 @@ app.use(passport.session())
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // })
-mongoose.connect("mongodb+srv://admin-eric:adeline@cluster0.cdksd.mongodb.net/medexDB", {
+mongoose.connect("mongodb+srv://ericchung:password1234@medex.34ghdpp.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
