@@ -219,7 +219,6 @@ app.post('/register', (req, res) => {
         User.register(
           {
             username: req.body.username,
-            email: req.body.email,
             fullname: req.body.name,
             mcqStarted: false,
             mcqCompleted: false,
