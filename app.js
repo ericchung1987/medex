@@ -34,11 +34,10 @@ app.use(passport.session())
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // })
-mongoose.connect("mongodb+srv://ericchung:password1234@medex.34ghdpp.mongodb.net/", {
+mongoose.connect("mongodb+srv://ericchung:password1234@medex.34ghdpp.mongodb.net/?retryWrites=true&w=majority&appName=medex", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
-mongoose.set('useFindAndModify', false)
 
 const userSchema = new mongoose.Schema({
   fullname: String,
